@@ -1,0 +1,22 @@
+local Hum = Instance.new("Humanoid")
+Hum.Parent = game.Players.LocalPlayer.Character
+ 
+ 
+local root =  game.Players.LocalPlayer.Character.HumanoidRootPart
+ 
+ 
+for i,v in pairs(plr.Character:GetChildren()) do
+    
+    if v ~= root and  v.Name ~= "Humanoid" then
+        
+        v:Destroy()
+        
+    end
+    
+    
+end
+           
+workspace.CurrentCamera.CameraSubject = root
+ 
+local se = Instance.new("SelectionBox",root)
+se.Adornee = root
